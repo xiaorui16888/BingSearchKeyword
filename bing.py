@@ -5,7 +5,8 @@ import queue
 
 with open('success.txt', 'w', encoding='utf-8') as fw:
     fw.write("Hello github Action")
-
+eixt()
+    
 #关键词队列
 keyword_q = queue.Queue()
 #爬取URL结果列表
