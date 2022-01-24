@@ -79,4 +79,4 @@ for i in range(int(num/2)):
         value_url_q.put("END")
     value_url_q.put(None)
 
-i = input("程序已结束")
+print('本程序结束')
