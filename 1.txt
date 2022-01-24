@@ -1,1 +1,1 @@
-サンミ .php?jobid= language:ja
+サンミ .php?item_id= language:ja
