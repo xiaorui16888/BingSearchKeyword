@@ -3,7 +3,9 @@ import lib.engine.BING as BING
 import threading
 import queue
 
-    
+#清空txt
+file = open("success.txt", 'w').close()
+   
 #关键词队列
 keyword_q = queue.Queue()
 #爬取URL结果列表
