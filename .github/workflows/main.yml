@@ -1,26 +1,37 @@
-name: BING
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Python application
 
 on:
-  workflow_dispatch:
   push:
-    branches: [main]
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  setup:
+  build:
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.8
-
-      - name: Install requirements
-        run: |
-          pip install -r requirements.txt
-      - name: start search keywords
-        run: |
-          export LANG=zh_CN.UTF8
-          python bing.py
-     
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Test with pytest
+      run: |
+        python bing.py
+    - name: sync
+      run: |
+        git config --global user.email "87920151@qq.com"
+        git config --global user.name "xiaorui16888"
+        git add .
+        git commit -m "success.txt"
+        git push -u origin master
