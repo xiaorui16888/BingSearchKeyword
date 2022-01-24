@@ -5,7 +5,7 @@ import queue
 
 with open('success.txt', 'w', encoding='utf-8') as fw:
     fw.write("Hello github Action")
-eixt()
+exit()
     
 #关键词队列
 keyword_q = queue.Queue()
