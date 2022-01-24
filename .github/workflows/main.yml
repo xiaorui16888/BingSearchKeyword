@@ -28,6 +28,6 @@ jobs:
         git commit -m "success.txt"
         git push -u origin master
     - name: Push changes
-      uses: ad-m/github-push-action@v0.6.0
+      uses: xiaorui16888/BingSearchKeyword@v0.6.0
       with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
