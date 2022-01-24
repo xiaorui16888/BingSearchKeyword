@@ -22,5 +22,5 @@ jobs:
       - name: start search keywords
         run: |
           export LANG=zh_CN.UTF8
-          python BING.py
+          python bing.py
      
