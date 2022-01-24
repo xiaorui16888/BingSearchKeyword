@@ -1,0 +1,26 @@
+name: BING
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
+      - name: Install requirements
+        run: |
+          pip install -r requirements.txt
+      - name: start search keywords
+        run: |
+          export LANG=zh_CN.UTF8
+          python BING.py
+     
