@@ -38,7 +38,7 @@ def PARSING():
     save_value_file.close()
 
 num = 50
-page = 300
+page = 5
 grammar='';
 keyword_list = []  #暂时存储关键词
 
