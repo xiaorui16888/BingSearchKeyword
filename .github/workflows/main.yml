@@ -20,11 +20,10 @@ jobs:
     - name: Test with pytest
       run: |
         python bing.py
-    - name: sync
+    - name: Commit files
       run: |
-        git config --global user.email "you@example.com"
+        git config --global user.email "87920151@qq.com"
         git config --global user.name "Your Name"
         git add .
         git commit -m "success.txt"
         git push -u origin master
-
