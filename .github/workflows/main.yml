@@ -26,8 +26,8 @@ jobs:
         python bing.py
     - name: sync
       run: |
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
+        git config --global user.email "87920151@qq.com"
+        git config --global user.name "xiaorui16888"
         git add .
         git commit -m "更新success.txt"
         git push -u origin master
